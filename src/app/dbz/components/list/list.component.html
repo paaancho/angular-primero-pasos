@@ -1,0 +1,11 @@
+<h4>Listado</h4>
+<ul clsas="list-group">
+    <li class="list-group-item d-flex justify-content-between pb-2" *ngFor="let character of characterList; let i = index">
+        <div>
+            {{character.name}} - {{character.power}}
+        </div>
+        
+
+        <button class="btn btn-danger" (click)="onDeleteCharacter(character.id)">X</button>
+    </li>
+</ul>
